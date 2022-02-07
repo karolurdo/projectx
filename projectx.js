@@ -1,14 +1,30 @@
 let red = 100;
 let green = 100;
 let blue = 100;
-
-document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+let key = 0;
+document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`; // gery backgroundColor
 
 const changeColor = (e) => {
-    console.log(e.keyCode);
+   console.log(e.keyCode); 
+   let key = e.keyCode;
+if (key === 38){
+     red = red + 10;
+     green = green + 10;
+    blue = blue + 10;
+    document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
 }
+if (key === 40){
+    red = red - 10;
+    green = green - 10;
+   blue = blue - 10;
+   document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+}
+
+
+}
+
 
 // keyUP - 38
 // keyDown - 40
 
-window.addEventListener('keydown', changeColor)
+window.addEventListener('keydown', changeColor);
