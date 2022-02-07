@@ -30,10 +30,10 @@ document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`; // gery 
 const changeColor = (e) => {
 switch (e.keyCode) {
     case 38:
-        document.body.style.backgroundColor = `rgb(${red++}, ${green++}, ${blue++})`;
+        document.body.style.backgroundColor = `rgb(${red<=255 ? red++ : red}, ${green++}, ${blue++})`;
         break;
     case 40:
-        document.body.style.backgroundColor = `rgb(${red--}, ${green--}, ${blue--})`;
+        document.body.style.backgroundColor = `rgb(${red >=0 ? red-- : red}, ${green--}, ${blue--})`;
         break;
 }
 
